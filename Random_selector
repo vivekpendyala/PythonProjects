@@ -1,0 +1,31 @@
+import random
+# List of movies to be selected randomly
+Animation=['Kochadaiiyaan','Spider-Man: Into the Spider-Verse','Mahabharat 3D','The Lion King','Cars']
+RomCom=['Hello Brother','Kuch Kuch Hota Hai','Dil Chahta Hai','Yes Boss','Pyaar Kiya Toh Darna Kya']
+Thriller=['Drishyam','Badla','Kahaani','Game Over','Talaash']
+Action=['War','Bang Bang','Baaghi','Saaho','Tanhaji']
+# showing end user there option
+print('Enter any one option from given options')
+print('1.Animation \n2.Thriller\n3.Action\n4.Romantic Comedy')
+# For printing list of movies 
+def prodList(x):
+  print('\n MOVIES LIST \n')
+  for i in random.sample(x,2):
+    print('--->',i)
+ #  Asking end user there option
+option=input('Enter your option:')
+while True:      # this is introduced if the end user enter any invalid option.so,that we can re ask him/her
+  if option.lower()=='animation' or option=='1':
+    prodList(Animation)
+    break
+  elif option.lower()=='thriller' or option=='2':
+    prodList(Thriller)
+    break
+  elif option.lower()=='action' or option=='3':
+    prodList(Action)
+    break
+  elif option.lower()=='romantic comedy' or option=='4' or option.lower()=='romanticcomedy':
+    prodList(RomCom)
+    break
+  else:
+    option=input('Enter any one of the above mentioned options:')
