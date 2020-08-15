@@ -1,0 +1,13 @@
+############ Program for printing first n fibonacci series values 
+
+n=int(input("Enter a number"))
+a,b=0,1
+print(a,",",b,sep='',end=',')            
+for i in range(n-2):
+  c=a+b
+  a,b=b,c
+  if i==(n-3):
+    print(c)
+  else:
+    print(c,end=',')
+
