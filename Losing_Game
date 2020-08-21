@@ -1,0 +1,70 @@
+import random
+import time
+d = [0,1]
+ch = random.choice(d)
+print("Welcome to the game of loosing".center(130))
+time.sleep(0.5)
+print(" The main motto of the game to Count value.",end="")
+time.sleep(0.5)
+print(" Intiale the count value will be 0.",end="")
+time.sleep(0.5)
+print("You need provide a value in between 1 to 10.",end="")
+time.sleep(0.5)
+print("Which will be add to the count.",end="")
+time.sleep(0.5)
+print("In the same manner computer also provides a value and increases the count value")
+time.sleep(0.5)
+print("whoever increases the count value to 100 will win the game.....")
+time.sleep(0.5)
+print("All The Best...".center(100))
+finish = 100
+count = 0
+d = 0 
+v = com_no =  0
+if ch == 0:
+    print("You are the first player")
+    time.sleep(0.5)
+    print("Computer is the secound player")
+    print("--------------------------------------------------".center(60))
+else:
+    print("Computer is the First player")
+    time.sleep(0.5)
+    print("You are the secound player")
+    print("--------------------------------------------------".center(60))
+    com_no = 1
+    count += com_no
+    print("Computer generated value is",com_no)
+    time.sleep(0.3)
+    print("The updated value of count is",count)
+
+while count<finish:
+    time.sleep(0.5)
+    n = int(input("Your input :"))
+    if n <=10 and n>0:
+        time.sleep(0.5)
+        count += n
+        print("The total count is  ",count)
+        if ch==1:
+            print("--------------------------------------------------".center(60))
+        com_no = 11 - n+v
+        if com_no <=10:
+            pass
+        else:
+            d=0
+        if d == 0 and ch != 1:
+            v = 1
+            d =1
+        else:
+            v = 0
+        time.sleep(0.5)
+        print("Computer generated number is ",com_no)
+        count += com_no
+        time.sleep(0.5)
+        print("The updated count value is ",count)
+        if ch==0:
+            print("--------------------------------------------------".center(60))
+    else:
+        time.sleep(0.5)
+        print("The value should be in the range of 1 to 10")
+print("-----Computer Won the game------".center(100))
+print("Better luck next time...".center(70))
